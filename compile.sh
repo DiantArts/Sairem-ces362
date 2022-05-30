@@ -3,7 +3,7 @@
 docker rm -f ces362_container
 
 docker build -t ces362_image .
-docker run -dit -v ${PWD}/:/usr/src/Sairem-ces362/ --name ces362_container ces362_image
+docker run -di -v ${PWD}/:/usr/src/Sairem-ces362/ --name ces362_container ces362_image
 
 docker exec -it ces362_container touch ./ces362
 docker exec -it ces362_container chmod +x ./ces362
