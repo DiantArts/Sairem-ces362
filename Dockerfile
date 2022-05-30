@@ -1,2 +1,2 @@
 FROM ubuntu:latest
-WORKDIR /usr/src/Sairem-ces362
+WORKDIR /usr/src/Sairem-ces356
