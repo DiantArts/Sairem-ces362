@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 # project
 project(CMakeSandbox LANGUAGES CXX)
 set(XRN_BIN_NAME xrn)
-set(XRN_CXX_VERSION 23)
+set(XRN_CXX_VERSION 17)
 set(XRN_LIBS_REQUIRED fmt/6.2.1 catch2/2.13.6 sfml/2.5.0@bincrafters/stable)
 
 # paths

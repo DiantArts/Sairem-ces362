@@ -1,5 +1,22 @@
 #!/bin/sh
 
+docker rm -f ces362_container
+
+docker build -t ces362_image .
+docker run -dit -v ${PWD}/:/usr/src/Sairem-ces362/ --name ces362_container ces362_image
+
+docker exec -it ces362_container touch ./ces362
+docker exec -it ces362_container chmod +x ./ces362
+docker exec -it ces362_container ls
+ls
+docker exec -it ces362_container echo "fake ces362 is now compiled"
+
+docker kill ces362_container
+docker rm -f ces362_container
+docker image rm ces362_image
+
+return 0
+
 clear && rm -rf ./.build/ ./RandomDir/CMakeCache.txt ./RandomDir/CMakeFiles/
 
 BUILD_DIR='.build'
